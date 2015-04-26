@@ -166,6 +166,22 @@ section {
 	}
 }
 
+#footer {
+	background: #fff;
+	padding: 20px 0;
+	font-size: 13px;
+
+	.ir {
+		background: $main-color;
+		padding: 2px 5px;
+		color: #fff;
+		font-size: 12px;
+		text-decoration: none;
+		vertical-align: middle;
+		@include prefix(border-radius, 3px);
+	}
+}
+
 @media screen and (max-width: 640px) {
 	h1 {
 		font-size: 35px;
@@ -184,23 +200,6 @@ section {
 		left: inherit;
 	}
 }
-
-#footer {
-	background: #fff;
-	padding: 20px 0;
-	font-size: 13px;
-
-	.ir {
-		background: $main-color;
-		padding: 2px 5px;
-		color: #fff;
-		font-size: 12px;
-		text-decoration: none;
-		vertical-align: middle;
-		@include prefix(border-radius, 3px);
-	}
-}
-
 
 
 
