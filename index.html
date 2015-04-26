@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Bruno Rodrigues</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="assets/css/global.css" type="text/css">
+
+	<!-- MetaTags -->
+	<meta name="viewport" content="width=device-width, initial-scale= 1.0">
+	<meta name="description" content="Calcule quanto vale sua hora de trabalho.">
+	<meta name="keywords" content="Calcular horas, horas de trabalho, quanto vale, valor/hora, valor da hora">
+	<meta name="author" content="Bruno Rodrigues">
+
+</head>
+<body>
+	<div class="overlay"></div>
+
+	<header id="header">
+		<div class="container">
+			<h1><span>Quanto vale</span> minha hora?</h1>
+			<p>
+				Sabe aquele cálculo de horas que a gente faz pra saber quanto cobrar por um projeto
+				ou apenas saber quanto vale nossa hora de trabalho? Então, pensando nisso resolvi
+				fazer algo para ajudar quem precisa e eu me incluo nessa rs.
+			</p>
+		</div>
+	</header>
+
+	<section class="container">
+		<form id="quantoVale">
+			<span class="field">
+				<label for="nome">Olá, qual é o seu nome?</label>
+				<input type="text" name="nome" placeholder="seu nome aqui" autocomplete="off"/>
+			</span>
+
+			<span class="field">
+				<label for="salario">Meio indiscreto, mas qual o valor da sua renda(<em>bruta</em>) mensal?</label>
+				<input type="text" name="salario" placeholder="Vamos lá, seja otimista =)" autocomplete="off" required/>
+			</span>
+
+			<span class="field">
+				<label for="dias">Quantos dias você trabalha no mês?</label>
+				<input type="text" name="dias" placeholder="0 a 31" autocomplete="off" required/>
+			</span>
+
+			<span class="field">
+				<label for="horas">Quantas horas você trabalha por dia?</label>
+				<input type="text" name="horas" placeholder="as horas do videogame não conta ;)" autocomplete="off" required/>
+			</span>
+
+			<div class="actions">
+				<button class="btn btn-prime" type="submit">Calcular</button>
+				<button class="btn" type="reset">Limpar</button>
+			</div>
+		</form>
+
+		<div id="resultado">
+			<p>Olá <span class="nome"></span>, o valor da sua hora de trabalho é:</p>
+			<span class="calculoFinal"></span>
+		</div>
+	</section>
+
+	<footer id="footer">
+		<div class="container">
+			<p>
+				Quer contribuir? Isso seria ótimo.<br />
+				Vamos desenvolver juntos =D. Dá uma olhada no repositório do projeto
+				<a href="https://github.com/brunodsgn/quantovale" class="ir" title="Github - Repositório do Projeto">aqui</a></p>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script type="text/javascript" src="assets/js/main.js"></script>
+</body>
+</html>

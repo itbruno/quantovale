@@ -1,0 +1,211 @@
+// Layout
+* {
+	@include prefix(box-sizing, border-box);
+}
+
+body {
+	background: #f0f0f0;
+	color: #555;
+	font:{
+		size: 14px;
+		weight: 400;
+		family: $font-base;
+	}
+	line-height: 1.5em;
+}
+
+h1 {
+	font-size: 40px;
+	text-transform: uppercase;
+	line-height: 1.2em;
+	margin-bottom: 20px;
+	font-weight: 700;
+	span {
+		color: lighten($main-color, 25%);
+		font-weight: 400;
+	}
+}
+
+p {
+	margin-bottom: 20px;
+}
+
+section {
+	padding: 20px;
+}
+
+.container {
+	max-width: 1000px;
+	margin: 10px auto;
+}
+
+// Header
+#header {
+	background: $main-color;
+	color: #fff;
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+// Overlay
+.overlay {
+	display: none;
+	position: fixed;
+	background: rgba(0,0,0,0.8);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 10;
+	overflow: hidden;
+}
+
+// Buttons
+.btn {
+	cursor: pointer;
+	padding: 12px 20px;
+	border: 0;
+	text-transform: uppercase;
+	display: inline-block;
+	margin: 10px 0;
+	background-color: #fff;
+	color: #909090;
+	outline: 0;
+	font-family: $font-base;
+	letter-spacing: 1px;
+	@include prefix(border-radius, 3px);
+	@include prefix(transition, all .4s ease);
+
+	&:hover {
+		@include prefix(box-shadow, 0 2px 3px rgba(0,0,0,0.2));
+	}
+
+	&.btn-prime {
+		background: $main-color;
+		color: #fff;
+		&:hover {
+			background: darken($main-color, 10%);
+		}
+	}
+}
+
+// Form
+#quantoVale {
+	margin-bottom: 40px;
+
+	button {
+		margin-right: 5px;
+	}
+
+	.actions {
+		display: block;
+		margin: 15px 0;
+	}
+}
+
+.field {
+	position: relative;
+
+	&, label {
+		display: block;
+	}
+
+	label {
+		margin: 15px 0 10px;
+		font-weight: 500;
+	}
+
+	input[type="text"] {
+		background: #f7f7f7;
+		padding: 10px 15px;
+		border: 2px solid #d2d2d2;
+		color: #555;
+		outline: 0;
+		min-width: 250px;
+		font-size: 12px;
+		font-family: $font-base;
+		@include prefix(border-radius, 3px);
+		@include prefix(transition, all .4s ease);
+		&:focus {
+			outline: 0;
+			background: #fff;
+			border-color: #fff;
+			@include prefix(box-shadow, 0 3px 10px rgba(0,0,0,0.2));
+			@include prefix(transform, scale(1.1));
+		}
+	}
+}
+
+// Resultado
+#resultado {
+	display: none;
+	font-size: 16px;
+	line-height: 1.5em;
+	padding: 20px;
+	background: $main-color;
+	color: #fff;
+	max-width: 500px;
+	width: 100%;
+	min-height: 120px;
+	z-index: 20;
+	position: absolute;
+	text-align: center;
+	top: 40%;
+	left: 50%;
+	margin: 0 0 0 -250px;
+	@include prefix(border-radius, 3px);
+	@include prefix(box-shadow, 0 2px 20px rgba(0,0,0,0.2));
+
+	.nome {
+		font-weight: 600;
+	}
+	.calculoFinal {
+		font-size: 30px;
+		font-weight: 600;
+		color: lighten($main-color, 50%);
+	}
+}
+
+@media screen and (max-width: 640px) {
+	h1 {
+		font-size: 35px;
+	}
+
+	.container {
+		width: 100%;
+		padding: 20px;
+	}
+
+	#resultado {
+		width: 90%;
+		position: fixed;
+		margin: 0;
+		top: 20%;
+		left: inherit;
+	}
+}
+
+#footer {
+	background: #fff;
+	padding: 20px 0;
+	font-size: 13px;
+
+	.ir {
+		background: $main-color;
+		padding: 2px 5px;
+		color: #fff;
+		font-size: 12px;
+		text-decoration: none;
+		vertical-align: middle;
+		@include prefix(border-radius, 3px);
+	}
+}
+
+
+
+
+
+
+
+
+
