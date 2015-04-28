@@ -18,6 +18,17 @@
 		return (parseFloat(salario.value) / dias.value) / horas.value;
 	};
 
+	// Permite apenas numeros
+	function removeTexto(el) {
+		el.addEventListener('keyup', function(){
+			this.value = this.value.replace(/\D/g,"");
+		});
+	}
+	// Campos numericos
+	removeTexto(salario);
+	removeTexto(dias);
+	removeTexto(horas);
+
 	// Funcao para montar resultado final
 	function showCalculo() {
 		// Exibe nome no modal de resultado
@@ -25,7 +36,7 @@
 
 		// Exibe Total
 		var total = calculaTotal();
-		calculoFinal.innerHTML = "R$ " + total.toFixed(2);
+		calculoFinal.innerHTML = "R$ " + total.toFixed(2).replace('.',',');
 
 		// Mostra Resultado
 		overlay.style.display = 'block';
@@ -33,7 +44,6 @@
 	}
 
 	myForm.onsubmit = function() {
-
 		// Monta Resultado
 		showCalculo();
 
