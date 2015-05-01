@@ -7,16 +7,16 @@
 		calculoFinal = resultado.querySelector('.calculoFinal'); // Calculo final(resultado)
 
 	// Pega valores
-	var myForm = document.forms['quantoVale'],
-		nome = myForm.elements['nome'],
-		salario = myForm.elements['salario'],
-		dias = myForm.elements['dias'],
-		horas = myForm.elements['horas'];
+	var myForm = document.forms.quantoVale,
+		nome = myForm.nome,
+		salario = myForm.salario,
+		dias = myForm.dias,
+		horas = myForm.horas;
 
 	// Calculo
 	function calculaTotal() {
 		return (parseFloat(salario.value) / dias.value) / horas.value;
-	};
+	}
 
 	// Permite apenas numeros
 	function removeTexto(el) {
@@ -53,12 +53,12 @@
 		console.log(horas.value);
 
 		return false;
-	}
+	};
 
 	// Fecha modal
 	overlay.onclick = function() {
 		this.style.display = 'none';
 		resultado.style.display = 'none';
-	}
+	};
 
 })(window, document, undefined);
