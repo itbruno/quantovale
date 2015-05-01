@@ -9,7 +9,13 @@ Espero que seja útil para você assim como é para mim. =)
   - Sass (.scss)
   - [GulpJS][gulp]
 
+### GulpJS Tasks
+  - jshint ([gulp-jshint][gulp-jshint])
+  - styles ([gulp-ruby-sass][gulp-ruby-sass])
+
 
 Sua ajuda para contribuir será muito bem vinda! =)
 
 [gulp]: http://gulpjs.com
+[gulp-ruby-sass]: https://www.npmjs.com/package/gulp-ruby-sass
+[gulp-jshint]: https://www.npmjs.com/package/gulp-jshint/
