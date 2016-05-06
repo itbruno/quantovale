@@ -24,6 +24,13 @@
 			this.value = this.value.replace(/\D/g,"");
 		});
 	}
+
+	// Mostrar e ocultar elementos
+	function toggleElement(el) {
+		el = el || document.querySelector(el);
+		el.classList.toggle('hide');
+	}
+
 	// Campos numericos
 	removeTexto(salario);
 	removeTexto(dias);
@@ -39,8 +46,8 @@
 		calculoFinal.innerHTML = "R$ " + total.toFixed(2).replace('.',',');
 
 		// Mostra Resultado
-		overlay.style.display = 'block';
-		resultado.style.display = 'block';
+		toggleElement(overlay);
+		toggleElement(resultado);
 	}
 
 	myForm.onsubmit = function() {
@@ -48,17 +55,17 @@
 		showCalculo();
 
 		// Debug
-		console.log(parseFloat(salario.value));
-		console.log(dias.value);
-		console.log(horas.value);
+		console.log('Salário: ' + parseFloat(salario.value));
+		console.log('Dias: ' + dias.value);
+		console.log('Horas: ' + horas.value);
 
 		return false;
 	};
 
 	// Fecha modal
 	overlay.onclick = function() {
-		this.style.display = 'none';
-		resultado.style.display = 'none';
+		toggleElement(this);
+		toggleElement(resultado);
 	};
 
 })(window, document, undefined);

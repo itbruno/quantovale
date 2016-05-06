@@ -47,9 +47,10 @@ section {
 	padding: 20px 0;
 }
 
+.hide { display: none; }
+
 // Overlay
 .overlay {
-	display: none;
 	position: fixed;
 	background: rgba(0,0,0,0.8);
 	width: 100%;
@@ -138,7 +139,6 @@ section {
 
 // Resultado
 #resultado {
-	display: none;
 	font-size: 16px;
 	line-height: 1.5em;
 	padding: 20px;
