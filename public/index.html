@@ -25,29 +25,24 @@
 	</header>
 
 	<section class="container">
-		<form id="quantoVale">
+		<form id="quantovale">
 			<span class="field">
-				<label for="nome">Olá, qual é o seu nome?</label>
-				<input type="text" name="nome" placeholder="seu nome aqui" autocomplete="off"/>
-			</span>
-
-			<span class="field">
-				<label for="salario">Meio indiscreto, mas qual o valor da sua renda(<em>bruta</em>) mensal?</label>
-				<input type="text" name="salario" placeholder="Vamos lá, seja otimista =)" autocomplete="off" required/>
+				<label for="salario">Meio indiscreto, mas qual o valor da sua renda(<i>bruta</i>) mensal?</label>
+				<input type="text" id="salario" name="salario" placeholder="Vamos lá, seja otimista =)" autocomplete="off" required/>
 			</span>
 
 			<span class="field">
 				<label for="dias">Quantos dias você trabalha no mês?</label>
-				<input type="text" name="dias" placeholder="0 a 31" autocomplete="off" maxlength="2" required/>
+				<input type="text" id="dias" name="dias" placeholder="0 a 31" autocomplete="off" maxlength="2" required/>
 			</span>
 
 			<span class="field">
 				<label for="horas">Quantas horas você trabalha por dia?</label>
-				<input type="text" name="horas" placeholder="as horas do videogame não conta ;)" maxlength="2" autocomplete="off" required/>
+				<input type="text" id="horas" name="horas" placeholder="as horas do videogame não conta ;)" maxlength="2" autocomplete="off" required/>
 			</span>
 
 			<div class="actions">
-				<button class="btn btn-prime" type="submit">Calcular</button>
+				<button class="js-submit btn btn-prime" type="submit">Calcular</button>
 				<button class="btn" type="reset">Limpar</button>
 			</div>
 		</form>
