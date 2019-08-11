@@ -1,7 +1,8 @@
-RawBlameHistory
 # Default
 .DS_Store
 *.log
 
 # Nodejs Modules
 node_modules
+assets
+*.lock

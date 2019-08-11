@@ -1,14 +1,25 @@
 {
-  "name": "QuantoVale",
+  "name": "quantovale",
   "version": "1.0.0",
-  "description": "Aplicação para calcular o valor da sua hora de trabalho",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/brunodsgn/quantovale.git"
+  "main": "index.js",
+  "repository": "git@github.com:itbruno/quantovale.git",
+  "author": "Bruno Rodrigues <brunowebr@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "webpack-dev-server --mode development"
   },
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-jshint": "^1.10.0",
-    "gulp-ruby-sass": "^1.0.5"
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.2.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.2.0",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.8.0"
   }
 }

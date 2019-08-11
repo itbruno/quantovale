@@ -1,3 +1,5 @@
+import '../scss/global.scss';
+
 (function(window, document){
 	'use strict';
 
