@@ -4,14 +4,14 @@
 }
 
 body {
-	background: #f0f0f0;
-	color: #555;
+    background-color: #f9f9f9;
+	color: #333;
 	font:{
 		size: 16px;
 		weight: 400;
 		family: $font-base;
 	}
-	line-height: 1.5em;
+    line-height: 1.5em;
 }
 
 h1 {
@@ -34,17 +34,37 @@ section {
 	padding: 20px;
 }
 
-.container {
-	max-width: 1000px;
-	margin: 10px auto;
+.main {
+    display: flex;
+    height: 100vh;
+    
+    .contribute {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 5px;
+        color: #333;
+        margin-top: 50px;
+    }
+
+    @media screen and (max-width: 560px) {
+        flex-direction: column;
+    }
 }
 
-// Header
-#header {
-	background: $main-color;
-	color: #fff;
-	overflow: hidden;
-	padding: 20px 0;
+.wrap {
+    padding: 10%;
+    width: 50vw;
+    height: 100vh;
+
+    @media screen and (max-width: 560px) {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.bg-primary {
+    background-color: $main-color; 
+    color: #fff;
 }
 
 .hide { display: none; }
@@ -64,30 +84,29 @@ section {
 // Buttons
 .btn {
 	cursor: pointer;
-	padding: 15px 25px;
+    padding: 15px 25px;
+    font-size: 15px;
 	border: 0;
 	text-transform: uppercase;
-	display: inline-block;
+	display: block;
 	margin: 10px 0;
 	background-color: #fff;
 	color: #909090;
 	outline: 0;
     font-family: $font-base;
     font-weight: 600;
-	letter-spacing: 1px;
-	@include prefix(border-radius, 3px);
-	@include prefix(transition, all .2s ease);
-
-	&:hover {
-		@include prefix(box-shadow, 0 2px 3px rgba(0,0,0,0.2));
-	}
-
+    letter-spacing: .07em;
+    width: 100%;
+    @include prefix(border-radius, 3px);
+    @include prefix(transition, all .2s ease);
+    @include prefix(box-shadow, 0 2px 3px rgba(0,0,0,0.2));
+	
 	&.btn-prime {
-		background: $yellow;
-        color: #222;
+		background: $main-color;
+        color: #fff;
         
 		&:hover {
-			background: darken($yellow, 10%);
+			background: darken($main-color, 10%);
 		}
 	}
 }
@@ -102,7 +121,7 @@ section {
 
 	.actions {
 		display: block;
-		margin: 30px 0;
+        margin: 30px 0;
 	}
 }
 
@@ -115,101 +134,58 @@ section {
 
 	label {
 		margin: 15px 0 10px;
-		font-weight: 500;
+        font-weight: 500;
+        color: #404040;
 	}
 
 	input[type="text"] {
-		background: #f7f7f7;
+		background: #fff;
 		padding: 15px 20px;
-		border: 2px solid #d2d2d2;
+		border: 2px solid #eee;
 		color: #555;
 		outline: 0;
-		min-width: 250px;
+		width: 100%;
 		font-size: 16px;
 		font-family: $font-base;
-		@include prefix(border-radius, 3px);
+		@include prefix(border-radius, 5px);
 		@include prefix(transition, all .4s ease);
 		&:focus {
 			outline: 0;
 			background: #fff;
 			border-color: #fff;
-			@include prefix(box-shadow, 0 3px 10px rgba(0,0,0,0.2));
+			@include prefix(box-shadow, 0 5px 10px rgba(0,0,0,0.05));
         }
         
         &.error {
             border-color: rgb(214, 34, 34);
+        }
+
+        @media screen and (max-width: 560px) {
+            width: 100%;
         }
 	}
 }
 
 // Resultado
 #resultado {
-	font-size: 16px;
-	line-height: 1.5em;
-	padding: 20px;
-	background: $main-color;
-	color: #fff;
-	max-width: 500px;
-	width: 100%;
-	min-height: 120px;
-	z-index: 20;
-	position: absolute;
-	text-align: center;
-	top: 40%;
-	left: 50%;
-	margin: 0 0 0 -250px;
-	@include prefix(border-radius, 3px);
-	@include prefix(box-shadow, 0 2px 20px rgba(0,0,0,0.2));
+    background-color: $main-color;
+    color: $yellow;
+    padding: 20px;
+    border-radius: 5px;
 
-	.nome {
-		font-weight: 600;
-	}
 	.calculoFinal {
-		font-size: 40px;
-		font-weight: 600;
+        color: #fff;
+        font-size: 40px;
+        font-weight: 600;
 		color: lighten($main-color, 50%);
 	}
 }
 
-#footer {
-	background: #fff;
-	padding: 20px 0;
-	font-size: 13px;
-
-	.ir {
-		background: $main-color;
-		padding: 2px 5px;
-		color: #fff;
-		font-size: 12px;
-		text-decoration: none;
-		vertical-align: middle;
-		@include prefix(border-radius, 3px);
-	}
+.label {
+    background: $main-color;
+    padding: 2px 5px;
+    color: #fff;
+    text-decoration: none;
+    vertical-align: middle;
+    @include prefix(border-radius, 3px);
 }
-
-@media screen and (max-width: 640px) {
-	h1 {
-		font-size: 35px;
-	}
-
-	.container {
-		width: 100%;
-		padding: 20px;
-	}
-
-	#resultado {
-		width: 90%;
-		position: fixed;
-		margin: 0;
-		top: 20%;
-		left: inherit;
-	}
-}
-
-
-
-
-
-
-
-

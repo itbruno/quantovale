@@ -12,57 +12,51 @@
 </head>
 <body>
 	<div class="overlay hide"></div>
-
-	<header id="header">
-		<div class="container">
-			<h1><span>Quanto vale</span> minha hora?</h1>
+	<main class="main">
+		<div class="wrap bg-primary">
+            <h1><span>Quanto vale</span> minha hora?</h1>
 			<p>
 				Sabe aquele cálculo de horas que a gente faz pra saber quanto cobrar por um projeto
 				ou apenas saber quanto vale nossa hora de trabalho? Então, pensando nisso resolvi
 				fazer algo para ajudar quem precisa e eu me incluo nessa rs.
 			</p>
-		</div>
+            <div class="contribute">
+                Quer contribuir? Isso seria ótimo.<br />
+                Vamos desenvolver juntos =D. Dá uma olhada no repositório do projeto
+                <a href="https://github.com/itbruno/quantovale" target="_blank" class="label" title="Github - Repositório do Projeto">aqui</a>
+            </div>
+        </div>
+
+        <section class="wrap">
+            <form id="quantovale">
+                <span class="field">
+                    <label for="salario">Quanto você ganha por mês?</label>
+                    <input type="text" id="salario" name="salario" placeholder="Ex.: 2500" autocomplete="off" required/>
+                </span>
+
+                <span class="field">
+                    <label for="dias">Quantos dias você trabalha no mês?</label>
+                    <input type="text" id="dias" name="dias" placeholder="0 a 31" autocomplete="off" maxlength="2" required/>
+                </span>
+
+                <span class="field">
+                    <label for="horas">Quantas horas você trabalha por dia?</label>
+                    <input type="text" id="horas" name="horas" placeholder="Ex.: 8" maxlength="2" autocomplete="off" required/>
+                </span>
+
+                <div class="actions">
+                    <button class="js-submit btn btn-prime" type="submit">Calcular</button>
+                </div>
+            </form>
+
+            <div id="resultado" class="hide">
+                <p>Olá <span class="nome"></span>, o valor da sua hora de trabalho é:</p>
+                <span class="calculoFinal"></span>
+            </div>
+        </section>
 	</header>
 
-	<section class="container">
-		<form id="quantovale">
-			<span class="field">
-				<label for="salario">Meio indiscreto, mas qual o valor da sua renda(<i>bruta</i>) mensal?</label>
-				<input type="text" id="salario" name="salario" placeholder="Vamos lá, seja otimista =)" autocomplete="off" required/>
-			</span>
-
-			<span class="field">
-				<label for="dias">Quantos dias você trabalha no mês?</label>
-				<input type="text" id="dias" name="dias" placeholder="0 a 31" autocomplete="off" maxlength="2" required/>
-			</span>
-
-			<span class="field">
-				<label for="horas">Quantas horas você trabalha por dia?</label>
-				<input type="text" id="horas" name="horas" placeholder="as horas do videogame não conta ;)" maxlength="2" autocomplete="off" required/>
-			</span>
-
-			<div class="actions">
-				<button class="js-submit btn btn-prime" type="submit">Calcular</button>
-				<button class="btn" type="reset">Limpar</button>
-			</div>
-		</form>
-
-		<div id="resultado" class="hide">
-			<p>Olá <span class="nome"></span>, o valor da sua hora de trabalho é:</p>
-			<span class="calculoFinal"></span>
-		</div>
-	</section>
-
-	<footer id="footer">
-		<div class="container">
-			<p>
-				Quer contribuir? Isso seria ótimo.<br />
-				Vamos desenvolver juntos =D. Dá uma olhada no repositório do projeto
-				<a href="https://github.com/itbruno/quantovale" class="ir" title="Github - Repositório do Projeto">aqui</a></p>
-		</div>
-	</footer>
-
-	<!-- Scripts -->
+    <!-- Scripts -->
 	<script src="./bundle.js"></script>
 </body>
 </html>
