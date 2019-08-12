@@ -1,4 +1,4 @@
-## [WIP] Quanto vale minha hora
+## Quanto vale minha hora
 
 A ideia deste projeto é facilitar na hora de fazer cálculo para saber o valor da sua hora trabalhada.
 Espero que seja útil para você assim como é para mim. =)
