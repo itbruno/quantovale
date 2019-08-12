@@ -5,17 +5,17 @@ Espero que seja útil para você assim como é para mim. =)
 
 ### Desenvolvido com
   - HTML/CSS
-  - JS (_sem frameworks_)
+  - ES6/Babel
   - Sass (.scss)
-  - [GulpJS][gulp]
+  - Webpack
+  - Yarn
 
-### GulpJS Tasks
-  - jshint ([gulp-jshint][gulp-jshint])
-  - styles ([gulp-ruby-sass][gulp-ruby-sass])
+### Setup
+```
+$ yarn install
+```
 
-
-Sua ajuda para contribuir será muito bem vinda! =)
-
-[gulp]: http://gulpjs.com
-[gulp-ruby-sass]: https://www.npmjs.com/package/gulp-ruby-sass
-[gulp-jshint]: https://www.npmjs.com/package/gulp-jshint/
+### Build
+```
+$ yarn dev
+```
