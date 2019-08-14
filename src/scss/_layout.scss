@@ -46,7 +46,7 @@ section {
         margin-top: 50px;
     }
 
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 767px) {
         flex-direction: column;
     }
 }
@@ -56,7 +56,7 @@ section {
     width: 50vw;
     height: 100vh;
 
-    @media screen and (max-width: 560px) {
+    @media screen and (max-width: 767px) {
         width: 100%;
         height: auto;
     }
@@ -160,7 +160,7 @@ section {
             border-color: rgb(214, 34, 34);
         }
 
-        @media screen and (max-width: 560px) {
+        @media screen and (max-width: 767px) {
             width: 100%;
         }
 	}
@@ -188,4 +188,10 @@ section {
     text-decoration: none;
     vertical-align: middle;
     @include prefix(border-radius, 3px);
+}
+
+.hidden-xs {
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
 }
