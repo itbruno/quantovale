@@ -18,7 +18,10 @@ export default class Quantocusta {
 
     showResult() {
         this.resultContent.classList.remove('hide');
-        document.querySelector('.calculoFinal').innerHTML = `R$ ${this.total.toFixed(2).replace('.',',')}`;
+        document.querySelector('.calculoFinal').innerHTML = new Intl.NumberFormat('pt-BR', {
+            style: 'currency',
+            currency: 'BRL'
+        }).format(this.total);
     }
 
     // Events handle in app
