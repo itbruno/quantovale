@@ -3,7 +3,6 @@ import Validate from './Validate';
 export default class Quantocusta {
     
     constructor() {
-        this.inputName = document.getElementById('nome');
         this.inputSalary = document.getElementById('salario');
         this.inputDays = document.getElementById('dias');
         this.inputHours = document.getElementById('horas');
